@@ -97,13 +97,15 @@ public class FlipFlapActivity extends Activity {
         switch (coverStyle) {
             case 1:
                 mView = new DotcaseView(mContext, mStatus);
-                setContentView((View) mView);
                 break;
             case 2:
                 mView = new WindowView(mContext);
-                setContentView((View) mView);
+                break;
+            case 3:
+                mView = new IceviewView(mContext);
                 break;
         }
+        setContentView((View) mView);
 
         WindowManager.LayoutParams lp = getWindow().getAttributes();
         lp.screenBrightness = mView.getScreenBrightness();

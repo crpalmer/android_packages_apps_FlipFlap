@@ -71,6 +71,7 @@ public class FlipFlapService extends Service {
                 switch (mCoverStyle) {
                     case 1:
                     case 2:
+                    case 3:
                         Log.i(TAG, "1 cover style detected:" + mCoverStyle);
                         intent.setClass(this, FlipFlapActivity.class);
                         intent.setAction(FlipFlapUtils.ACTION_COVER_CLOSED);
